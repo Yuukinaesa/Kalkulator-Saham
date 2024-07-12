@@ -54,17 +54,15 @@ def stock_page(title, default_fee_beli, default_fee_jual):
             st.warning("Harap masukkan semua nilai dengan benar.")
 
 menu_selection = st.sidebar.radio("Pilih Menu:", ("Welcome", "IPOT / Indo Premier Sekuritas", "Stockbit / Bibit", "BNI Bions"))
-
-if menu_selection == "Welcome":
-    st.title("Welcome!")
-    st.write("Selamat datang di aplikasi kalkulator profit/loss saham.")
-    st.write("👈 Silahkan pilih aplikasi yang digunakan pada menu sidebar. 👈")
-
-    st.sidebar.success('''
+st.sidebar.success('''
     
     **@Yuukinaesa** \n
                     Arfan Hidayat Priyantono ✅
     ''')
+
+if menu_selection == "Welcome":
+    st.title("Kalkulator Saham")
+    st.write("👈 Silahkan pilih aplikasi yang digunakan pada menu sidebar. 👈")
 
 elif menu_selection == "IPOT / Indo Premier Sekuritas":
     stock_page("IPOT / Indo Premier Sekuritas", 0.0019, 0.0029)
